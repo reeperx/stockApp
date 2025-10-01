@@ -1,8 +1,14 @@
 import TradingViewWidget from "@/components/TradingViewWidget";
-import { HEATMAP_WIDGET_CONFIG, MARKET_DATA_WIDGET_CONFIG, MARKET_OVERVIEW_WIDGET_CONFIG, TOP_STORIES_WIDGET_CONFIG } from "@/lib/constants";
+import {
+  HEATMAP_WIDGET_CONFIG,
+  LIVECHART_WIDGET_CONFIG,
+  MARKET_DATA_WIDGET_CONFIG,
+  MARKET_OVERVIEW_WIDGET_CONFIG,
+  TOP_STORIES_WIDGET_CONFIG,
+} from "@/lib/constants";
 
 export default function Home() {
-  const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`
+  const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
 
   return (
     <div className="flex min-h-screen home-wrapper">
@@ -17,10 +23,11 @@ export default function Home() {
           />
         </div>
         <div className="md:col-span-1 xl:col-span-2">
-        <TradingViewWidget
-            title="Stock Heatmap"
-            scriptUrl={`${scriptUrl}stock-heatmap.js`}
-            config={HEATMAP_WIDGET_CONFIG}
+          <TradingViewWidget
+            title="Live Charts"
+            scriptUrl={`${scriptUrl}advanced-chart.js`}
+            config={LIVECHART_WIDGET_CONFIG}
+            className="custom-chart"
             height={600}
           />
         </div>
@@ -35,9 +42,9 @@ export default function Home() {
           />
         </div>
         <div className="h-full md:col-span-1 xl:col-span-2">
-        <TradingViewWidget
-            scriptUrl={`${scriptUrl}market-quote.js`}
-            config={MARKET_DATA_WIDGET_CONFIG}
+          <TradingViewWidget
+            scriptUrl={`${scriptUrl}stock-heatmap.js`}
+            config={HEATMAP_WIDGET_CONFIG}
             height={600}
           />
         </div>
