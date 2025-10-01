@@ -114,6 +114,18 @@ export const HEATMAP_WIDGET_CONFIG = {
   height: '600',
 };
 
+export const SCREENER_WIDGET_CONFIG = {
+  market: "forex",
+  showToolbar: "true",
+  defaultColumn: "overview",
+  defaultScreen: "general",
+  isTransparent: true,
+  locale: 'en',
+  colorTheme: 'dark',
+  width: '100%',
+  height: '600',
+}
+
 export const LIVECHART_WIDGET_CONFIG = {
   allow_symbol_change: true,
   calendar: false,

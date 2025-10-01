@@ -4,6 +4,7 @@ import {
   LIVECHART_WIDGET_CONFIG,
   MARKET_DATA_WIDGET_CONFIG,
   MARKET_OVERVIEW_WIDGET_CONFIG,
+  SCREENER_WIDGET_CONFIG,
   TOP_STORIES_WIDGET_CONFIG,
 } from "@/lib/constants";
 
@@ -43,8 +44,8 @@ export default function Home() {
         </div>
         <div className="h-full md:col-span-1 xl:col-span-2">
           <TradingViewWidget
-            scriptUrl={`${scriptUrl}stock-heatmap.js`}
-            config={HEATMAP_WIDGET_CONFIG}
+            scriptUrl={`${scriptUrl}screener.js`}
+            config={SCREENER_WIDGET_CONFIG}
             height={600}
           />
         </div>
