@@ -59,6 +59,7 @@ const SignUp = () => {
         <InputField
           name="email"
           label="Email"
+          type="email"
           placeholder="text@test.com"
           register={register}
           error={errors.email}
@@ -81,13 +82,13 @@ const SignUp = () => {
           }}
         />
 
-        {/* <CountrySelectField
+        <CountrySelectField
           name="country"
           label="Country"
           control={control}
           error={errors.country}
           required
-        /> */}
+        />
 
         <SelectField
           name="InvestmentGoals"
